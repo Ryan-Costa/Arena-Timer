@@ -1,0 +1,14 @@
+{
+  "name": "arena-cron",
+  "version": "1.0.0",
+  "description": "Cronômetro para Arena Castelão",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ryan Costa",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.6"
+  }
+}
