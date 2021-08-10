@@ -1,28 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="handleBarApp">
-    <table width="100%">
-        <tr>
-            <td width="100%"><div id="moveBarApp"><b id="titleApplication">Cronômetro Arena Castelão</b></div></td>
-            <td><a onclick="window.close()" class="closeButtonApp">x</a></td>
-        </tr>
-    </table>
-  </div><br>
-  
-  <div class="max-width">
-    <a onclick="teste()" class="buttonsComands" id="bg-green">Iniciar</a>
-    <a onclick="" class="buttonsComands" id="bg-yellow">Pausar</a>
-    <a onclick="" class="buttonsComands" id="bg-red">Parar</a>
-    <h1 id="counter">00:00</h1>
-</div>
 
-<script src="script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="css/main.css">
+    
+
+</head>
+
+<body>
+    <div class="frame">
+        <table width="100%">
+            <tr>
+                <td width="100%">
+                  <div class="drag">
+                    <b id="title">ArenaCron</b>
+                  </div>
+                </td>
+                <td>
+                  <a id="configButton" ><img id="settingsSvg" src="assets/settings.svg" alt="Configurações"></a>
+                  <div class="divConfig addDisplayNone"> 
+                    <ul id="ulConfig">
+                      <li>
+                        <input id="minutes" type="number" max="2">
+                        :
+                        <input id="seconds" type="number" max="2">
+                      </li>
+                      <li>
+                        <button id="insert" type="submit">Inserir</button>
+                      </li>
+                      <li>
+                        <button id="csc"></button>
+                        <button id="for"></button>
+                        <button id="default"></button>
+                      </li>
+                    </ul>
+                  </div> 
+                </td>
+                <td><a id="minimizeButton"><img id="minimizeSvg" src="assets/minimize.svg" alt="Minimizar"></a></td>
+                <td><a id="closeButton"><img id="closeSvg" src="assets/close.svg" alt="Fechar"></a></td>
+            </tr>
+        </table>
+    </div><br>
+
+    <div class="divBorderLeft"></div>
+    <div class="divBorderRight"></div>
+    <div class="divBorderBottom"></div>
+
+    <div class="max-width">
+        <a onclick="start();" id="start" class="allButtonsStopwatch">Iniciar</a>
+        <a onclick="pause();" id="pause" class="allButtonsStopwatch">Pausar</a>
+        <a onclick="stop();" id="stop" class="allButtonsStopwatch">Zerar</a>
+
+        <h1 id="counter">00:00</h1>
+
+    </div>
+<script src="scripts/events.js"></script>
+<script src="scripts/stopwatch.js"></script>
+<script src="./scripts/hundle.js"></script>
+
 </body>
 </html>

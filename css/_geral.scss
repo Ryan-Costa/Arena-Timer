@@ -1,0 +1,35 @@
+// Configurações geral da página
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  user-select: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.divBorderRight {
+  height: calc(100vh - 36px);
+  width: 2px;
+  background-color: $primary-color;
+  position: absolute;
+  top: 34px;
+  right: 0px;
+}
+
+.divBorderLeft {
+  height: calc(100vh - 36px);
+  width: 2px;
+  background-color: $primary-color;
+  position: absolute;
+  top: 34px;
+  left: 0px;
+}
+
+.divBorderBottom {
+  height: 2px;
+  width: 100%;
+  background-color: $primary-color;
+  position: absolute;
+  bottom: 0px;
+}

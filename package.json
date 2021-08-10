@@ -10,5 +10,11 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^13.1.6"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lite-server": "^2.6.1",
+    "modernizr": "^3.11.7",
+    "sass": "^1.37.5"
   }
 }

@@ -1,0 +1,24 @@
+// Variables colors
+$primary-color: black;
+$secondary-color: white;
+$hover-button-color: rgb(189, 189, 189);
+$div-config-color: lightblue;
+$close-button-hover: rgb(190, 22, 22);
+
+
+// CEARÁ
+$ceara-color-1: #000000;
+$ceara-color-2: #FFFFFF;
+// FORTALEZA
+$fortaleza-color-1: #FE1108;
+$fortaleza-color-2: #111083;
+$fortaleza-color-3: #7171d4;
+
+// DEFAULT
+$arena-color-1: #F4FCFD;
+$arena-color-2: #1F8B46;
+
+@import 'geral';
+@import 'supBar';
+@import 'config';
+@import 'stopwatch';
