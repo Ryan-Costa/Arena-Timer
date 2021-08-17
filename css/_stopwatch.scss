@@ -36,20 +36,14 @@
   .configDisabledButton {
     cursor: not-allowed;
     opacity: 0.5;
-    background-color: $hover-button-color;
 
-    &:hover {
-      color: $primary-color;
-    }
-
-    &:active {
-      background-color: $hover-button-color;
-    }
   } 
 
   h1 {
+    width: 8rem;
     position: relative;
     top: 68px;
+    border-radius: 1rem;
     color: $primary-color;
     transition: all 0.5s;
   }
@@ -67,6 +61,14 @@
     &:active {
       background-color: $ceara-color-1;
     }
+  }
+
+  .counterCeara {
+    width: 8rem;
+    background-color: $ceara-color-3;
+    color: $ceara-color-2;
+    border-radius: 1rem;
+    transition: 0.5;
   }
 
   // CLASSE REFERENTE A FOLHA DE ESTILO DAS CORES DO FORTALEZA  (BOTÕES E CONTADOR)
@@ -88,10 +90,37 @@
 
   .counterFortaleza {
     color: $fortaleza-color-2;
+    width: 8rem;
+    background-color: $div-config-color;
+    border-radius: 1rem;
+    transition: 0.5;
   }
 
   // CLASSE REFERENTE A FOLHA DE ESTILO DAS CORES DA ARENA (PADRÃO) (BOTÕES E CONTADOR)
 
+  .buttonsArena{
+    background-color: $arena-color-2;
+    color: $arena-color-1;
+    transition: 0.5;
+  
+    &:hover {
+      background-color: $arena-color-3;
+      color: $arena-color-1;
+    }
+  
+    &.active {
+      background-color: $arena-color-2;;
+      color: $arena-color-1;
+    }
+  }
+
+  .counterArena{
+    color: $arena-color-2;
+    width: 8rem;
+    background-color: $div-config-color;
+    border-radius: 1rem;
+    transition: 0.5;
+  }
 }
 
 

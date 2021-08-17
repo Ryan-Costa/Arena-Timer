@@ -1,14 +1,21 @@
 // Variables colors
 $primary-color: black;
 $secondary-color: white;
+
 $hover-button-color: rgb(189, 189, 189);
-$div-config-color: lightblue;
+
+$div-config-color: rgb(223, 230, 233);
+$button-color-text: black;
+$button-insert: rgb(255,255,255 );
+$button-insert-hover: rgb(142, 149, 151);
+
 $close-button-hover: rgb(190, 22, 22);
 
 
 // CEARÁ
 $ceara-color-1: #000000;
 $ceara-color-2: #FFFFFF;
+$ceara-color-3: #BEAEB1;
 // FORTALEZA
 $fortaleza-color-1: #FE1108;
 $fortaleza-color-2: #111083;
@@ -17,6 +24,7 @@ $fortaleza-color-3: #7171d4;
 // DEFAULT
 $arena-color-1: #F4FCFD;
 $arena-color-2: #1F8B46;
+$arena-color-3: #2bd876;
 
 @import 'geral';
 @import 'supBar';

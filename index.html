@@ -14,37 +14,34 @@
 
 <body>
     <div class="frame">
-        <table width="100%">
-            <tr>
-                <td width="100%">
-                  <div class="drag">
-                    <b id="title">ArenaCron</b>
-                  </div>
-                </td>
-                <td>
-                  <a id="configButton" ><img id="settingsSvg" src="assets/settings.svg" alt="Configurações"></a>
-                  <div class="divConfig addDisplayNone"> 
-                    <ul id="ulConfig">
-                      <li>
-                        <input id="minutes" type="number" max="2">
-                        :
-                        <input id="seconds" type="number" max="2">
-                      </li>
-                      <li>
-                        <button id="insert" type="submit">Inserir</button>
-                      </li>
-                      <li>
-                        <button id="csc"></button>
-                        <button id="for"></button>
-                        <button id="default"></button>
-                      </li>
-                    </ul>
-                  </div> 
-                </td>
-                <td><a id="minimizeButton"><img id="minimizeSvg" src="assets/minimize.svg" alt="Minimizar"></a></td>
-                <td><a id="closeButton"><img id="closeSvg" src="assets/close.svg" alt="Fechar"></a></td>
-            </tr>
-        </table>
+      <div class="windowTitle">
+        <h3>Arena Cron</h3>
+      </div>
+      <div class="windowColorControl">
+        <button id="csc"></button>
+        <button id="for"></button>
+        <button id="arena"></button>
+      </div>
+      <div class="windowButtonsControl">
+        <a id="configButton" ><img id="settingsSvg" src="assets/settings.svg" alt="Configurações"></a>
+        <div class="divConfig addDisplayNone">
+          <ul id="ulConfig">
+            <li>
+              <input id="minutes" type="number" max="2">
+              :
+              <input id="seconds" type="number" max="2">
+            </li>
+            <li>
+              <button id="insert" type="submit">Inserir</button>
+            </li>
+            <li>
+              
+            </li>
+          </ul>
+        </div> 
+        <a id="minimizeButton"><img id="minimizeSvg" src="assets/minimize.svg" alt="Minimizar"></a>
+        <a id="closeButton"><img id="closeSvg" src="assets/close.svg" alt="Fechar"></a>
+      </div>
     </div><br>
 
     <div class="divBorderLeft"></div>

@@ -1,6 +1,6 @@
 var minutes = 0;
 var seconds = 0;
-const time = 1000; // Quantos milésimos há em um segundo
+const time = 200; // Quantos milésimos há em um segundo
 var stopwatch;
 var format;
 var input;
@@ -64,7 +64,7 @@ function timer(){
     minutes = 0;
   }
 
-  format = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+  format = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0')
 
   document.getElementById('counter').innerHTML = format
   

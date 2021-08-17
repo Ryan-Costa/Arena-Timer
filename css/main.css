@@ -38,25 +38,167 @@
 
 div.frame {
   width: 100%;
-  height: 32px;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
-  top: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-app-region: drag;
   /* z-index: 5; */
   /* position: fixed; */
-  /* Botão de minimizar barra superior */
-  /* Botão de fechar barra superior */
 }
 
-div.frame td div.drag {
-  -webkit-app-region: drag;
-  padding: 5px 5px;
+div.frame div.windowTitle {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-div.frame #configButton {
-  height: 10px;
-  width: 10px;
+div.frame div.windowTitle h3 {
+  margin: 0 0 0 1rem;
+}
+
+div.frame div.windowColorControl {
+  position: relative;
+  background-color: #dfe6e9;
+  border-radius: 1.5rem;
+  width: 5rem;
+  height: 1.7375rem;
+  right: 1.585rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-app-region: no-drag;
+}
+
+div.frame div.windowColorControl #csc {
+  position: relative;
+  right: 0.625rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: #000000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-app-region: no-drag;
+}
+
+div.frame div.windowColorControl #csc:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #000000;
+}
+
+div.frame div.windowColorControl #csc:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: white;
+}
+
+div.frame div.windowColorControl #for {
+  position: relative;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: #FE1108;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-app-region: no-drag;
+}
+
+div.frame div.windowColorControl #for:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #FE1108;
+}
+
+div.frame div.windowColorControl #for:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+div.frame div.windowColorControl #arena {
+  position: relative;
+  left: 0.625rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: #1F8B46;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-app-region: no-drag;
+}
+
+div.frame div.windowColorControl #arena:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #1F8B46;
+}
+
+div.frame div.windowColorControl #arena:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+div.frame div.windowButtonsControl {
+  margin: 0;
+  padding: 0 0.125rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-app-region: no-drag;
+}
+
+div.frame div.windowButtonsControl #configButton {
+  height: 0.5rem;
+  width: 0.625rem;
+  margin: 0;
+  padding: 0.625rem 0.3125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,22 +210,23 @@ div.frame #configButton {
           justify-content: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 10px 5px;
 }
 
-div.frame #configButton:hover {
+div.frame div.windowButtonsControl #configButton:hover {
   cursor: pointer;
   background-color: #bdbdbd;
 }
 
-div.frame #configButton img {
-  height: 15px;
-  width: 15px;
+div.frame div.windowButtonsControl #configButton img {
+  height: 0.9375rem;
+  width: 0.9375rem;
 }
 
-div.frame #minimizeButton {
-  height: 10px;
-  width: 10px;
+div.frame div.windowButtonsControl #minimizeButton {
+  height: 0.5rem;
+  width: 0.625rem;
+  margin: 0;
+  padding: 0.625rem 0.3125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,22 +238,23 @@ div.frame #minimizeButton {
           justify-content: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 10px 5px;
 }
 
-div.frame #minimizeButton:hover {
+div.frame div.windowButtonsControl #minimizeButton:hover {
   cursor: pointer;
   background-color: #bdbdbd;
 }
 
-div.frame #minimizeButton img {
-  height: 2px;
-  width: 15px;
+div.frame div.windowButtonsControl #minimizeButton img {
+  width: 2px;
+  width: 0.9375rem;
 }
 
-div.frame #closeButton {
-  height: 10px;
-  width: 10px;
+div.frame div.windowButtonsControl #closeButton {
+  height: 0.5rem;
+  width: 0.625rem;
+  margin: 0;
+  padding: 0.625rem 0.3125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,15 +266,14 @@ div.frame #closeButton {
           justify-content: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 10px 5px;
 }
 
-div.frame #closeButton:hover {
+div.frame div.windowButtonsControl #closeButton:hover {
   cursor: pointer;
   background-color: #be1616;
 }
 
-div.frame #closeButton img {
+div.frame div.windowButtonsControl #closeButton img {
   height: 12px;
   width: 12px;
 }
@@ -139,7 +282,7 @@ div.addColorCeara {
   background-color: #000000;
 }
 
-div.addColorCeara b {
+div.addColorCeara h3 {
   color: white;
 }
 
@@ -149,17 +292,30 @@ div.addColorFortaleza {
   transition: 0.5;
 }
 
-div.addColorFortaleza b {
+div.addColorFortaleza h3 {
+  color: white;
+}
+
+div.addColorArena {
+  background-color: #1F8B46;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+}
+
+div.addColorArena h3 {
   color: white;
 }
 
 div.divConfig {
-  height: 120px;
-  width: 100px;
-  right: 46px;
+  height: 7.5rem;
+  width: 6.25rem;
+  right: 0.875rem;
+  top: 2.875rem;
   position: absolute;
   list-style: none;
-  background-color: lightblue;
+  background-color: #dfe6e9;
+  -webkit-box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,7 +325,7 @@ div.divConfig {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px;
+  padding: 0.3125rem;
 }
 
 div.divConfig ul {
@@ -203,91 +359,27 @@ div.divConfig ul li #insert {
   top: 5px;
   margin: 0;
   padding: 0;
-  width: 50px;
-  height: 20px;
+  width: 4.0625rem;
+  height: 1.5625rem;
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background-color: white;
+  color: black;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  font-size: 10px;
+  font-size: 0.9375rem;
   cursor: pointer;
 }
 
 div.divConfig ul li #insert:hover {
-  background-color: #bdbdbd;
+  background-color: #8e9597;
   color: white;
 }
 
 div.divConfig ul li #insert:active {
   background-color: black;
   color: white;
-}
-
-div.divConfig ul li #csc {
-  position: relative;
-  top: 15px;
-  right: 10px;
-  width: 15px;
-  height: 15px;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  background-color: #000000;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-div.divConfig ul li #csc:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  background-color: #FFFFFF;
-}
-
-div.divConfig ul li #for {
-  position: relative;
-  top: 15px;
-  width: 15px;
-  height: 15px;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  background-color: #FE1108;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-div.divConfig ul li #for:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  background-color: #111083;
-}
-
-div.divConfig ul li #default {
-  position: relative;
-  top: 15px;
-  left: 10px;
-  width: 15px;
-  height: 15px;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  background-color: #F4FCFD;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-div.divConfig ul li #default:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  background-color: #1F8B46;
 }
 
 /* AO CLICAR NO BOTÃO ABRE E FECHA A DIV DE CONFIGURAÇÕES */
@@ -335,20 +427,13 @@ div.addDisplayNone {
 .max-width .configDisabledButton {
   cursor: not-allowed;
   opacity: 0.5;
-  background-color: #bdbdbd;
-}
-
-.max-width .configDisabledButton:hover {
-  color: black;
-}
-
-.max-width .configDisabledButton:active {
-  background-color: #bdbdbd;
 }
 
 .max-width h1 {
+  width: 8rem;
   position: relative;
   top: 68px;
+  border-radius: 1rem;
   color: black;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -367,6 +452,15 @@ div.addDisplayNone {
 
 .max-width .buttonsCeara:active {
   background-color: #000000;
+}
+
+.max-width .counterCeara {
+  width: 8rem;
+  background-color: #BEAEB1;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  -webkit-transition: 0.5;
+  transition: 0.5;
 }
 
 .max-width .buttonsFortaleza {
@@ -388,5 +482,36 @@ div.addDisplayNone {
 
 .max-width .counterFortaleza {
   color: #111083;
+  width: 8rem;
+  background-color: #dfe6e9;
+  border-radius: 1rem;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+}
+
+.max-width .buttonsArena {
+  background-color: #1F8B46;
+  color: #F4FCFD;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+}
+
+.max-width .buttonsArena:hover {
+  background-color: #2bd876;
+  color: #F4FCFD;
+}
+
+.max-width .buttonsArena.active {
+  background-color: #1F8B46;
+  color: #F4FCFD;
+}
+
+.max-width .counterArena {
+  color: #1F8B46;
+  width: 8rem;
+  background-color: #dfe6e9;
+  border-radius: 1rem;
+  -webkit-transition: 0.5;
+  transition: 0.5;
 }
 /*# sourceMappingURL=main.css.map */
