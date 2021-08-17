@@ -109,6 +109,56 @@ div.frame {
     }
   }
 
+  div.windowInputNumber {
+    margin: 0;
+    padding: 0 0.125rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    -webkit-app-region: no-drag;
+
+    #minutes, #seconds {
+      width: 20px;
+      height: 20px;
+      padding: 2px;
+      border: 1px solid;
+      border-radius: 0.5rem;
+      outline: none;
+      text-align: center;
+      background-color: $secondary-color;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    #insert {
+      margin: 0 0 0 0.5rem;
+      padding: 0;
+      width: 4.0625rem; // 70px
+      height: 1.5625rem; // 25px
+      outline: none;
+      border: 1px solid black;
+      border-radius: 0.3125rem; // 5px
+      background-color: $button-insert;
+      color: $button-color-text;
+      transition: 0.5s;
+      font-size: 0.9375rem; // 15px
+      cursor: pointer;
+      
+      &:hover {
+        background-color: $button-insert-hover;
+        color: $secondary-color;
+      }
+
+      &:active {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+    }
+  }
+
   div.windowButtonsControl {
     margin: 0;
     padding: 0 0.125rem 0 0;

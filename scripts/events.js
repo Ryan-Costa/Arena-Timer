@@ -60,13 +60,10 @@ function cearaTheme() {
       // === === === === === === === === === === === === === === === === === ===
       // Botões
       // === === === === === === === === === === === === === === === === === ===
+      if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsFortaleza')){
+        buttonStart.classList.remove('buttonsFortaleza')
+      }
   
-      if(buttonStart.classList.value == 'allButtonsStopWatch buttonsFortaleza configDisabledButton'){
-          buttonStart.classList.remove('buttonsFortaleza')
-      }
-      if(buttonStart.classList.value == 'allButtonsStopWatch configDisabledButton buttonsFortaleza'){
-          buttonStart.classList.remove('buttonsFortaleza')
-      }
       if(buttonStart.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
           buttonStart.classList.remove('buttonsFortaleza')
       }
@@ -78,12 +75,10 @@ function cearaTheme() {
       }
       
       // === === === === === === === === === === === === === === === === === ===
-      if(buttonStart.classList.value == 'allButtonsStopWatch buttonsArena configDisabledButton'){
+      if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsArena')){
         buttonStart.classList.remove('buttonsArena')
       }
-      if(buttonStart.classList.value == 'allButtonsStopWatch configDisabledButton buttonsArena'){
-          buttonStart.classList.remove('buttonsArena')
-      }
+      
       if(buttonStart.classList.value == 'allButtonsStopwatch buttonsArena'){
           buttonStart.classList.remove('buttonsArena')
       }
@@ -144,38 +139,31 @@ function fortalezaTheme(){
       // === === === === === === === === === === === === === === === === === ===
       // Botões
       // === === === === === === === === === === === === === === === === === ===
-      if(buttonStart.classList.value == 'allButtonsStopWatch buttonsCeara configDisabledButton'){
+
+      if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsCeara')){
         buttonStart.classList.remove('buttonsCeara')
-      }
-      if(buttonStart.classList.value == 'allButtonsStopWatch configDisabledButton buttonsCeara'){
+      }else if(buttonStart.classList.value == 'allButtonsStopwatch buttonsCeara'){
         buttonStart.classList.remove('buttonsCeara')
+      } else if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsArena')){
+        buttonStart.classList.remove('buttonsArena')
+      }else if(buttonStart.classList.value == 'allButtonsStopwatch buttonsArena'){
+        buttonStart.classList.remove('buttonsArena')
       }
-      if(buttonStart.classList.value == 'allButtonsStopwatch buttonsCeara'){
-        buttonStart.classList.remove('buttonsCeara')
-      }
+      
       if(buttonPause.classList.value == 'allButtonsStopwatch buttonsCeara'){
         buttonPause.classList.remove('buttonsCeara')
+      }else if(buttonPause.classList.value == 'allButtonsStopwatch buttonsArena'){
+        buttonPause.classList.remove('buttonsArena')
       }
+
       if(buttonStop.classList.value == 'allButtonsStopwatch buttonsCeara'){
         buttonStop.classList.remove('buttonsCeara')
+      }else if(buttonStop.classList.value == 'allButtonsStopwatch buttonsArena'){
+        buttonStop.classList.remove('buttonsArena')
       }
       
       // === === === === === === === === === === === === === === === === === ===
-      if(buttonStart.classList.value == 'allButtonsStopWatch buttonsArena configDisabledButton'){
-        buttonStart.classList.remove('buttonsArena')
-      }
-      if(buttonStart.classList.value == 'allButtonsStopWatch configDisabledButton buttonsArena'){
-          buttonStart.classList.remove('buttonsArena')
-      }
-      if(buttonStart.classList.value == 'allButtonsStopwatch buttonsArena'){
-        buttonStart.classList.remove('buttonsArena')
-      }
-      if(buttonPause.classList.value == 'allButtonsStopwatch buttonsArena'){
-        buttonPause.classList.remove('buttonsArena')
-      }
-      if(buttonStop.classList.value == 'allButtonsStopwatch buttonsArena'){
-        buttonStop.classList.remove('buttonsArena')
-      }
+      
       buttonStart.classList.toggle('buttonsFortaleza')
       buttonPause.classList.toggle('buttonsFortaleza')
       buttonStop.classList.toggle('buttonsFortaleza')
@@ -225,29 +213,25 @@ function arenaTheme(){
   // === === === === === === === === === === === === === === === === === ===
   // Botões
   // === === === === === === === === === === === === === === === === === ===
-  if(buttonStart.classList.value == 'allButtonsStopWatch buttonsCeara configDisabledButton'){
+  if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsCeara')){
     buttonStart.classList.remove('buttonsCeara')
-  }
-  if(buttonStart.classList.value == 'allButtonsStopWatch configDisabledButton buttonsCeara'){
+  }else if(buttonStart.classList.value == 'allButtonsStopwatch buttonsCeara'){
     buttonStart.classList.remove('buttonsCeara')
+  }else if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsFortaleza')){
+    buttonStart.classList.remove('buttonsFortaleza')
   }
-  if(buttonStart.classList.value == 'allButtonsStopwatch buttonsCeara'){
-    buttonStart.classList.remove('buttonsCeara')
-  }
+  
   if(buttonPause.classList.value == 'allButtonsStopwatch buttonsCeara'){
     buttonPause.classList.remove('buttonsCeara')
-  }
+  }else 
+  
   if(buttonStop.classList.value == 'allButtonsStopwatch buttonsCeara'){
     buttonStop.classList.remove('buttonsCeara')
   }
   
   // === === === === === === === === === === === === === === === === === ===
-  if(buttonStart.classList.value == 'allButtonsStopWatch buttonsFortaleza configDisabledButton'){
-    buttonStart.classList.remove('buttonsFortaleza')
-  }
-  if(buttonStart.classList.value == 'allButtonsStopWatch configDisabledButton buttonsFortaleza'){
-    buttonStart.classList.remove('buttonsFortaleza')
-  }
+  
+  
   if(buttonStart.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
     buttonStart.classList.remove('buttonsFortaleza')
   }

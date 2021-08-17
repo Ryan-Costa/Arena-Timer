@@ -177,6 +177,65 @@ div.frame div.windowColorControl #arena:active {
           transform: scale(1.2);
 }
 
+div.frame div.windowInputNumber {
+  margin: 0;
+  padding: 0 0.125rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-app-region: no-drag;
+}
+
+div.frame div.windowInputNumber #minutes, div.frame div.windowInputNumber #seconds {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  outline: none;
+  text-align: center;
+  background-color: white;
+}
+
+div.frame div.windowInputNumber input::-webkit-outer-spin-button,
+div.frame div.windowInputNumber input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+div.frame div.windowInputNumber #insert {
+  margin: 0 0 0 0.5rem;
+  padding: 0;
+  width: 4.0625rem;
+  height: 1.5625rem;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 0.3125rem;
+  background-color: white;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+div.frame div.windowInputNumber #insert:hover {
+  background-color: #8e9597;
+  color: white;
+}
+
+div.frame div.windowInputNumber #insert:active {
+  background-color: black;
+  color: white;
+}
+
 div.frame div.windowButtonsControl {
   margin: 0;
   padding: 0 0.125rem 0 0;
@@ -393,6 +452,7 @@ div.addDisplayNone {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 20px auto;
+  margin-top: 0;
   text-align: center;
   background: transparent;
 }

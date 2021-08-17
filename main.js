@@ -8,8 +8,10 @@ let win = null;
 function boot() {
     const appIcon = new Tray(__dirname+'/assets/cronometro.png')
     win = new BrowserWindow({
-        width: 400, 
-        height: 250, 
+        width: 600,
+        minWidth: 350, 
+        height: 250,
+        minHeight: 210, 
         transparent: true, 
         frame: false, 
         icon: __dirname+'/assets/cronometro.png',
