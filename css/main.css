@@ -48,7 +48,7 @@ div.frame {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  background-color: #f8eeee;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-app-region: drag;
@@ -67,19 +67,107 @@ div.frame div.windowTitle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 0 0 0.9rem;
+}
+
+div.frame div.windowTitle span {
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.frame div.windowTitle span img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 div.frame div.windowTitle h3 {
-  margin: 0 0 0 1rem;
+  font-size: 1rem;
+  margin: 0 0 0 0.5rem;
+}
+
+div.frame div.windowInputText {
+  margin: 0;
+  padding: 0 0.125rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-app-region: no-drag;
+}
+
+div.frame div.windowInputText #inputText {
+  width: 70px;
+  height: 20px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  outline: none;
+  text-align: center;
+  background-color: #f3ebf3;
+}
+
+div.frame div.windowInputText #insertTextButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 0 0.5rem;
+  padding: 0;
+  width: 2.0625rem;
+  height: 1.5625rem;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 0.3125rem;
+  background-color: #f3ebf3;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+div.frame div.windowInputText #insertTextButton:hover {
+  background-color: #8e9597;
+  color: #f8eeee;
+}
+
+div.frame div.windowInputText #insertTextButton:active {
+  background-color: black;
+  color: #f8eeee;
+}
+
+div.frame div.windowInputText #insertTextButton img {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 div.frame div.windowColorControl {
   position: relative;
-  background-color: #dfe6e9;
+  background-color: #d6d0d0;
   border-radius: 1.5rem;
   width: 5rem;
   height: 1.7375rem;
-  right: 1.585rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,7 +207,7 @@ div.frame div.windowColorControl #csc:hover {
 div.frame div.windowColorControl #csc:active {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background-color: white;
+  background-color: #f8eeee;
 }
 
 div.frame div.windowColorControl #for {
@@ -202,7 +290,7 @@ div.frame div.windowInputNumber #minutes, div.frame div.windowInputNumber #secon
   border-radius: 0.5rem;
   outline: none;
   text-align: center;
-  background-color: white;
+  background-color: #f3ebf3;
 }
 
 div.frame div.windowInputNumber input::-webkit-outer-spin-button,
@@ -211,14 +299,23 @@ div.frame div.windowInputNumber input::-webkit-inner-spin-button {
 }
 
 div.frame div.windowInputNumber #insert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 0 0 0.5rem;
   padding: 0;
-  width: 4.0625rem;
+  width: 2.0625rem;
   height: 1.5625rem;
   outline: none;
   border: 1px solid black;
   border-radius: 0.3125rem;
-  background-color: white;
+  background-color: #f3ebf3;
   color: black;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -228,12 +325,17 @@ div.frame div.windowInputNumber #insert {
 
 div.frame div.windowInputNumber #insert:hover {
   background-color: #8e9597;
-  color: white;
+  color: #f8eeee;
 }
 
 div.frame div.windowInputNumber #insert:active {
   background-color: black;
-  color: white;
+  color: #f8eeee;
+}
+
+div.frame div.windowInputNumber #insert img {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 div.frame div.windowButtonsControl {
@@ -342,7 +444,7 @@ div.addColorCeara {
 }
 
 div.addColorCeara h3 {
-  color: white;
+  color: #f8eeee;
 }
 
 div.addColorFortaleza {
@@ -352,7 +454,7 @@ div.addColorFortaleza {
 }
 
 div.addColorFortaleza h3 {
-  color: white;
+  color: #f8eeee;
 }
 
 div.addColorArena {
@@ -362,7 +464,7 @@ div.addColorArena {
 }
 
 div.addColorArena h3 {
-  color: white;
+  color: #f8eeee;
 }
 
 div.divConfig {
@@ -372,9 +474,9 @@ div.divConfig {
   top: 2.875rem;
   position: absolute;
   list-style: none;
-  background-color: #dfe6e9;
-  -webkit-box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  background-color: #d6d0d0;
+  -webkit-box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #f8eeee, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #f8eeee, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,7 +507,7 @@ div.divConfig ul li input {
   border: 1px solid;
   outline: none;
   text-align: center;
-  background-color: white;
+  background-color: #f8eeee;
 }
 
 div.divConfig ul li input::-webkit-outer-spin-button,
@@ -423,7 +525,7 @@ div.divConfig ul li #insert {
   outline: none;
   border: none;
   border-radius: 0.3125rem;
-  background-color: white;
+  background-color: #f3ebf3;
   color: black;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -433,12 +535,12 @@ div.divConfig ul li #insert {
 
 div.divConfig ul li #insert:hover {
   background-color: #8e9597;
-  color: white;
+  color: #f8eeee;
 }
 
 div.divConfig ul li #insert:active {
   background-color: black;
-  color: white;
+  color: #f8eeee;
 }
 
 /* AO CLICAR NO BOTÃO ABRE E FECHA A DIV DE CONFIGURAÇÕES */
@@ -469,7 +571,7 @@ div.addDisplayNone {
   cursor: pointer;
   border-radius: 6px;
   color: black;
-  background-color: white;
+  background-color: #f8eeee;
   display: inline-block;
 }
 
@@ -477,7 +579,7 @@ div.addDisplayNone {
   background-color: #bdbdbd;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  color: white;
+  color: #f8eeee;
 }
 
 .max-width .allButtonsStopwatch:active {
@@ -490,7 +592,7 @@ div.addDisplayNone {
 }
 
 .max-width h1 {
-  width: 8rem;
+  width: 11rem;
   position: relative;
   top: 68px;
   border-radius: 1rem;
@@ -515,7 +617,7 @@ div.addDisplayNone {
 }
 
 .max-width .counterCeara {
-  width: 8rem;
+  width: 11rem;
   background-color: #BEAEB1;
   color: #FFFFFF;
   border-radius: 1rem;
@@ -525,25 +627,25 @@ div.addDisplayNone {
 
 .max-width .buttonsFortaleza {
   background-color: #111083;
-  color: white;
+  color: #f8eeee;
   -webkit-transition: 0.5;
   transition: 0.5;
 }
 
 .max-width .buttonsFortaleza:hover {
   background-color: #7171d4;
-  color: white;
+  color: #f8eeee;
 }
 
 .max-width .buttonsFortaleza.active {
   background-color: #FE1108;
-  color: white;
+  color: #f8eeee;
 }
 
 .max-width .counterFortaleza {
+  width: 11rem;
   color: #111083;
-  width: 8rem;
-  background-color: #dfe6e9;
+  background-color: #d6d0d0;
   border-radius: 1rem;
   -webkit-transition: 0.5;
   transition: 0.5;
@@ -567,9 +669,9 @@ div.addDisplayNone {
 }
 
 .max-width .counterArena {
+  width: 11rem;
   color: #1F8B46;
-  width: 8rem;
-  background-color: #dfe6e9;
+  background-color: #d6d0d0;
   border-radius: 1rem;
   -webkit-transition: 0.5;
   transition: 0.5;

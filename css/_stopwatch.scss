@@ -40,8 +40,8 @@
 
   } 
 
-  h1 {
-    width: 8rem;
+  h1 {  
+    width: 11rem;
     position: relative;
     top: 68px;
     border-radius: 1rem;
@@ -65,7 +65,7 @@
   }
 
   .counterCeara {
-    width: 8rem;
+    width: 11rem;
     background-color: $ceara-color-3;
     color: $ceara-color-2;
     border-radius: 1rem;
@@ -90,8 +90,8 @@
   }
 
   .counterFortaleza {
+    width: 11rem;
     color: $fortaleza-color-2;
-    width: 8rem;
     background-color: $div-config-color;
     border-radius: 1rem;
     transition: 0.5;
@@ -116,8 +116,8 @@
   }
 
   .counterArena{
+    width: 11rem;
     color: $arena-color-2;
-    width: 8rem;
     background-color: $div-config-color;
     border-radius: 1rem;
     transition: 0.5;

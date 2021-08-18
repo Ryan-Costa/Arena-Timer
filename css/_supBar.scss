@@ -6,7 +6,7 @@ div.frame {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $secondary-color;
+  background-color: $color-sup-bar;
   transition: all 0.5s;
   -webkit-app-region: drag;
   /* z-index: 5; */
@@ -17,10 +17,80 @@ div.frame {
     display: flex;
     justify-content: start;
     align-items: center;
+    margin: 0 0 0 0.9rem;
     
-    h3 {
-      margin: 0 0 0 1rem;
+    span {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
+
+    h3 {
+      font-size: 1rem;
+      margin: 0 0 0 0.5rem;
+    }
+  }
+
+  div.windowInputText {
+    margin: 0;
+    padding: 0 0.125rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    -webkit-app-region: no-drag;
+
+    #inputText {
+      width: 70px;
+      height: 20px;
+      padding: 2px;
+      border: 1px solid;
+      border-radius: 0.5rem;
+      outline: none;
+      text-align: center;
+      background-color: $input-stopwatch;
+    }
+
+    #insertTextButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 0 0.5rem;
+      padding: 0;
+      width: 2.0625rem; // 70px
+      height: 1.5625rem; // 25px
+      outline: none;
+      border: 1px solid black;
+      border-radius: 0.3125rem; // 5px
+      background-color: $button-insert;
+      color: $button-color-text;
+      transition: 0.5s;
+      font-size: 0.9375rem; // 15px
+      cursor: pointer;
+      
+      &:hover {
+        background-color: $button-insert-hover;
+        color: $secondary-color;
+      }
+
+      &:active {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+
+      img {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
   }
 
   div.windowColorControl {
@@ -29,7 +99,6 @@ div.frame {
     border-radius: 1.5rem;
     width: 5rem;
     height: 1.7375rem;
-    right: 1.585rem;
     display: flex;
     margin: 0;
     justify-content: center;
@@ -126,7 +195,7 @@ div.frame {
       border-radius: 0.5rem;
       outline: none;
       text-align: center;
-      background-color: $secondary-color;
+      background-color: $input-stopwatch;
     }
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -134,9 +203,12 @@ div.frame {
     }
 
     #insert {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 0 0 0.5rem;
       padding: 0;
-      width: 4.0625rem; // 70px
+      width: 2.0625rem; // 70px
       height: 1.5625rem; // 25px
       outline: none;
       border: 1px solid black;
@@ -155,6 +227,11 @@ div.frame {
       &:active {
         background-color: $primary-color;
         color: $secondary-color;
+      }
+
+      img {
+        width: 1.2rem;
+        height: 1.2rem;
       }
     }
   }

@@ -1,5 +1,5 @@
 // Variável que recebe o botão/ícone de configuração
-var buttonConfig = document.querySelector('#configButton');
+// var buttonConfig = document.querySelector('#configButton'); DESATIVADO
 
 // Variável que recebem a div de configurações
 var divConfig = document.querySelector('.divConfig');
@@ -24,11 +24,12 @@ var closeIcon = document.querySelector("#closeSvg");
 
 // === === === === === === === === === === === === === === === === === ===
 
-function changeDisplay() {
-  divConfig.classList.toggle('addDisplayNone');
-}
+//DESATIVADO
+// function changeDisplay() {
+//   divConfig.classList.toggle('addDisplayNone');
+// }
 
-buttonConfig.addEventListener('click', changeDisplay);
+// buttonConfig.addEventListener('click', changeDisplay);
 
 function cearaTheme() {
       // Barra superior
@@ -48,11 +49,11 @@ function cearaTheme() {
       // === === === === === === === === === === === === === === === === === ===
 
       if(supBar.classList.value == 'frame addColorCeara'){
-          settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
+          // settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
           minimizeIcon.setAttribute('src', 'assets/minimizeWhite.svg');
           closeIcon.setAttribute('src', 'assets/closeWhite.svg');
       }else {
-          settingsIcon.setAttribute('src', 'assets/settings.svg');
+          // settingsIcon.setAttribute('src', 'assets/settings.svg');
           minimizeIcon.setAttribute('src', 'assets/minimize.svg');
           closeIcon.setAttribute('src', 'assets/close.svg');
       }
@@ -127,11 +128,11 @@ function fortalezaTheme(){
       // === === === === === === === === === === === === === === === === === ===
        
       if(supBar.classList.value == 'frame addColorFortaleza'){
-        settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
+        // settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
         minimizeIcon.setAttribute('src', 'assets/minimizeWhite.svg');
         closeIcon.setAttribute('src', 'assets/closeWhite.svg');
       }else {
-        settingsIcon.setAttribute('src', 'assets/settings.svg');
+        // settingsIcon.setAttribute('src', 'assets/settings.svg');
         minimizeIcon.setAttribute('src', 'assets/minimize.svg');
         closeIcon.setAttribute('src', 'assets/close.svg');
       }
@@ -201,11 +202,11 @@ function arenaTheme(){
   // === === === === === === === === === === === === === === === === === ===
    
   if(supBar.classList.value == 'frame addColorArena'){
-    settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
+    // settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
     minimizeIcon.setAttribute('src', 'assets/minimizeWhite.svg');
     closeIcon.setAttribute('src', 'assets/closeWhite.svg');
   }else {
-    settingsIcon.setAttribute('src', 'assets/settings.svg');
+    // settingsIcon.setAttribute('src', 'assets/settings.svg');
     minimizeIcon.setAttribute('src', 'assets/minimize.svg');
     closeIcon.setAttribute('src', 'assets/close.svg');
   }
@@ -219,28 +220,24 @@ function arenaTheme(){
     buttonStart.classList.remove('buttonsCeara')
   }else if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsFortaleza')){
     buttonStart.classList.remove('buttonsFortaleza')
+  }else if(buttonStart.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
+    buttonStart.classList.remove('buttonsFortaleza')
   }
   
   if(buttonPause.classList.value == 'allButtonsStopwatch buttonsCeara'){
     buttonPause.classList.remove('buttonsCeara')
-  }else 
+  }else if(buttonPause.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
+    buttonPause.classList.remove('buttonsFortaleza')
+  }
   
   if(buttonStop.classList.value == 'allButtonsStopwatch buttonsCeara'){
     buttonStop.classList.remove('buttonsCeara')
+  } else if(buttonStop.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
+    buttonStop.classList.remove('buttonsFortaleza')
   }
   
   // === === === === === === === === === === === === === === === === === ===
   
-  
-  if(buttonStart.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-    buttonStart.classList.remove('buttonsFortaleza')
-  }
-  if(buttonPause.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-    buttonPause.classList.remove('buttonsFortaleza')
-  }
-  if(buttonStop.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-    buttonStop.classList.remove('buttonsFortaleza')
-  }
   buttonStart.classList.toggle('buttonsArena')
   buttonPause.classList.toggle('buttonsArena')
   buttonStop.classList.toggle('buttonsArena')
