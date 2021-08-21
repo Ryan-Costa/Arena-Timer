@@ -18,6 +18,11 @@ npm start
 
 #### Para rodar executar e rodar o projeto.
 
+### Prévia: 
+
+![image](https://user-images.githubusercontent.com/62930267/130331559-b1fa5651-3585-4a71-9b5b-afe02d78fb38.png)
+
+
 #### Obrigado!
 
 ##### Primeiro commit 15/07/2021
