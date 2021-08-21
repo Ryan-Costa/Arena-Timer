@@ -1,4 +1,4 @@
-# Arena-Cron
+# Arena-Timer
 
 #### Cronometro para compor o telão da Arena Castelão.
 
@@ -20,7 +20,7 @@ npm start
 
 ### Prévia: 
 
-![image](https://user-images.githubusercontent.com/62930267/130331559-b1fa5651-3585-4a71-9b5b-afe02d78fb38.png)
+![image](https://user-images.githubusercontent.com/62930267/130331575-4010bf2d-ca85-44d8-ad5a-46b6e459e7a7.png)
 
 
 #### Obrigado!
