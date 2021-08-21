@@ -18,4 +18,6 @@ npm start
 
 #### Para rodar executar e rodar o projeto.
 
-##### Primeiro commit 15/07/2021g
+#### Obrigado!
+
+##### Primeiro commit 15/07/2021
