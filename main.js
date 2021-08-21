@@ -6,7 +6,6 @@ const ipc = ipcMain
 let win = null;
 
 function boot() {
-    const appIcon = new Tray(__dirname+'/assets/cronometro.png')
     win = new BrowserWindow({
         width: 600,
         minWidth: 350, 
