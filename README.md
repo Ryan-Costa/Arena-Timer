@@ -16,7 +16,7 @@ npm install
 npm start
 ```
 
-#### Para rodar executar e rodar o projeto.
+#### Para executar e rodar o projeto.
 
 ### Prévia: 
 
