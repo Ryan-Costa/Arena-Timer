@@ -1,258 +1,172 @@
-// Variável que recebe o botão/ícone de configuração
-// var buttonConfig = document.querySelector('#configButton'); DESATIVADO
-
-// Variável que recebem a div de configurações
-var divConfig = document.querySelector('.divConfig');
-
-// Variável que recebe a barra superior
 var supBar = document.querySelector('.frame');
 
-// Variáveis para receber os botões do cronometro
 var buttonStart = document.querySelector('#start')
 var buttonPause = document.querySelector('#pause')
 var buttonStop = document.querySelector('#stop')
 
-// Variáveis que recebe, o botão referente as cores das equipes
 var buttonCeara = document.querySelector('#csc')
 var buttonFortaleza = document.querySelector('#for')
 var buttonArena = document.querySelector('#arena')
 
-// Variáveis que recebem as imagens dos ícones da barra superior
 var settingsIcon = document.querySelector("#settingsSvg");
 var minimizeIcon = document.querySelector("#minimizeSvg");
 var closeIcon = document.querySelector("#closeSvg");
 
-// === === === === === === === === === === === === === === === === === ===
-
-//DESATIVADO
-// function changeDisplay() {
-//   divConfig.classList.toggle('addDisplayNone');
-// }
-
-// buttonConfig.addEventListener('click', changeDisplay);
+function changeTheme(className, minimizeImage, closeImage) {
+  if (supBar.classList.value == className) {
+    minimizeIcon.setAttribute('src', minimizeImage);
+    closeIcon.setAttribute('src', closeImage);
+  } else {
+    minimizeIcon.setAttribute('src', 'assets/minimize.svg');
+    closeIcon.setAttribute('src', 'assets/close.svg');
+  }
+}
 
 function cearaTheme() {
-      // Barra superior
-      switch(supBar.classList.value) {
-        case 'frame addColorFortaleza':
-          supBar.classList.remove('addColorFortaleza');
-          break;
-
-        case 'frame addColorArena':
-          supBar.classList.remove('addColorArena');
-          break;
+      const classMap = {
+        'frame addColorFortaleza': 'addColorFortaleza',
+        'frame addColorArena': 'addColorArena',
+      };
+      
+      const currentClass = supBar.classList.value;
+      const classToRemove = classMap[currentClass];
+      
+      if (classToRemove) {
+        supBar.classList.remove(classToRemove);
       }
+      
       supBar.classList.toggle('addColorCeara');
-      
-      // === === === === === === === === === === === === === === === === === ===
-      // condicional para saber se a cor da barra superior foi alterada para trocar os ícones por brancos.
-      // === === === === === === === === === === === === === === === === === ===
 
-      if(supBar.classList.value == 'frame addColorCeara'){
-          // settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
-          minimizeIcon.setAttribute('src', 'assets/minimizeWhite.svg');
-          closeIcon.setAttribute('src', 'assets/closeWhite.svg');
-      }else {
-          // settingsIcon.setAttribute('src', 'assets/settings.svg');
-          minimizeIcon.setAttribute('src', 'assets/minimize.svg');
-          closeIcon.setAttribute('src', 'assets/close.svg');
-      }
+      changeTheme('frame addColorCeara', 'assets/minimizeWhite.svg', 'assets/closeWhite.svg');
 
-      // === === === === === === === === === === === === === === === === === ===
-      // Botões
-      // === === === === === === === === === === === === === === === === === ===
-      if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsFortaleza')){
-        buttonStart.classList.remove('buttonsFortaleza')
-      }
-  
-      if(buttonStart.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-          buttonStart.classList.remove('buttonsFortaleza')
-      }
-      if(buttonPause.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-          buttonPause.classList.remove('buttonsFortaleza')
-      }
-      if(buttonStop.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-          buttonStop.classList.remove('buttonsFortaleza')
-      }
-      
-      // === === === === === === === === === === === === === === === === === ===
-      if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsArena')){
-        buttonStart.classList.remove('buttonsArena')
-      }
-      
-      if(buttonStart.classList.value == 'allButtonsStopwatch buttonsArena'){
-          buttonStart.classList.remove('buttonsArena')
-      }
-      if(buttonPause.classList.value == 'allButtonsStopwatch buttonsArena'){
-        buttonPause.classList.remove('buttonsArena')
-      }
-      if(buttonStop.classList.value == 'allButtonsStopwatch buttonsArena'){
-        buttonStop.classList.remove('buttonsArena')
-      }
+      const buttons = [buttonStart, buttonPause, buttonStop];
+      const classesToRemove = ['buttonsFortaleza', 'buttonsArena'];
+
+      buttons.forEach(button => {
+        classesToRemove.forEach(classToRemove => {
+          if (button.classList.contains(classToRemove) && (button.classList.value === `allButtonsStopwatch ${classToRemove}` || button.classList.contains('configDisabledButton'))) {
+            button.classList.remove(classToRemove)
+          }
+        });
+      });
 
       buttonStart.classList.toggle('buttonsCeara')
       buttonPause.classList.toggle('buttonsCeara')
       buttonStop.classList.toggle('buttonsCeara')
       
-      // === === === === === === === === === === === === === === === === === ===
-      // Contador
-      // === === === === === === === === === === === === === === === === === ===
-
-      if(counter.classList.value == 'counterFortaleza'){
-        counter.classList.remove('counterFortaleza')
+      const classCounterMap = {
+        'counterFortaleza': 'counterFortaleza',
+        'counterArena': 'counterArena',
+      };
+      
+      const currentCounterClass = counter.classList.value;
+      const classCounterToRemove = classCounterMap[currentCounterClass];
+      
+      if (classCounterToRemove) {
+        counter.classList.remove(classCounterToRemove);
       }
-      if(counter.classList.value == 'counterArena'){
-        counter.classList.remove('counterArena')
-      }
-      counter.classList.toggle('counterCeara')
+      
+      counter.classList.toggle('counterCeara');
 }
 
 buttonCeara.addEventListener('click', cearaTheme);
 
 
 function fortalezaTheme(){
-      // Barra superior
-      switch(supBar.classList.value) {
-        case 'frame addColorCeara':
-          supBar.classList.remove('addColorCeara');
-          break;
-
-        case 'frame addColorArena':
-          supBar.classList.remove('addColorArena');
-          break;
+      const classMap = {
+        'frame addColorCeara': 'addColorCeara',
+        'frame addColorArena': 'addColorArena',
+      };
+      
+      const currentClass = supBar.classList.value;
+      const classToRemove = classMap[currentClass];
+      
+      if (classToRemove) {
+        supBar.classList.remove(classToRemove);
       }
+      
       supBar.classList.toggle('addColorFortaleza');
 
-      // === === === === === === === === === === === === === === === === === ===
-      // condicional para saber se a cor da barra superior foi alterada para trocar os ícones por brancos.
-      // === === === === === === === === === === === === === === === === === ===
-       
-      if(supBar.classList.value == 'frame addColorFortaleza'){
-        // settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
-        minimizeIcon.setAttribute('src', 'assets/minimizeWhite.svg');
-        closeIcon.setAttribute('src', 'assets/closeWhite.svg');
-      }else {
-        // settingsIcon.setAttribute('src', 'assets/settings.svg');
-        minimizeIcon.setAttribute('src', 'assets/minimize.svg');
-        closeIcon.setAttribute('src', 'assets/close.svg');
-      }
+      changeTheme('frame addColorFortaleza', 'assets/minimizeWhite.svg', 'assets/closeWhite.svg');
 
-      // === === === === === === === === === === === === === === === === === ===
-      // Botões
-      // === === === === === === === === === === === === === === === === === ===
+      const buttons = [buttonStart, buttonPause, buttonStop];
+      const classesToRemove = ['buttonsCeara', 'buttonsArena'];
 
-      if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsCeara')){
-        buttonStart.classList.remove('buttonsCeara')
-      }else if(buttonStart.classList.value == 'allButtonsStopwatch buttonsCeara'){
-        buttonStart.classList.remove('buttonsCeara')
-      } else if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsArena')){
-        buttonStart.classList.remove('buttonsArena')
-      }else if(buttonStart.classList.value == 'allButtonsStopwatch buttonsArena'){
-        buttonStart.classList.remove('buttonsArena')
-      }
-      
-      if(buttonPause.classList.value == 'allButtonsStopwatch buttonsCeara'){
-        buttonPause.classList.remove('buttonsCeara')
-      }else if(buttonPause.classList.value == 'allButtonsStopwatch buttonsArena'){
-        buttonPause.classList.remove('buttonsArena')
-      }
-
-      if(buttonStop.classList.value == 'allButtonsStopwatch buttonsCeara'){
-        buttonStop.classList.remove('buttonsCeara')
-      }else if(buttonStop.classList.value == 'allButtonsStopwatch buttonsArena'){
-        buttonStop.classList.remove('buttonsArena')
-      }
-      
-      // === === === === === === === === === === === === === === === === === ===
+      buttons.forEach(button => {
+        classesToRemove.forEach(classToRemove => {
+          if (button.classList.contains(classToRemove) && (button.classList.value === `allButtonsStopwatch ${classToRemove}` || button.classList.contains('configDisabledButton'))) {
+            button.classList.remove(classToRemove)
+          }
+        });
+      });
       
       buttonStart.classList.toggle('buttonsFortaleza')
       buttonPause.classList.toggle('buttonsFortaleza')
       buttonStop.classList.toggle('buttonsFortaleza')
-      
-      // === === === === === === === === === === === === === === === === === ===
-      // Contador
-      // === === === === === === === === === === === === === === === === === ===
 
-      if(counter.classList.value == 'counterCeara'){
-        counter.classList.remove('counterCeara')
+      const classCounterMap = {
+        'counterCeara': 'counterCeara',
+        'counterArena': 'counterArena',
+      };
+      
+      const currentCounterClass = counter.classList.value;
+      const classCounterToRemove = classCounterMap[currentCounterClass];
+      
+      if (classCounterToRemove) {
+        counter.classList.remove(classCounterToRemove);
       }
-      if(counter.classList.value == 'counterArena'){
-        counter.classList.remove('counterArena')
-      }
-      counter.classList.toggle('counterFortaleza')
+      
+      counter.classList.toggle('counterFortaleza');
 }
 
 buttonFortaleza.addEventListener('click', fortalezaTheme);
 
 function arenaTheme(){
-  // Barra superior
-  switch(supBar.classList.value) {
-    case 'frame addColorCeara':
-      supBar.classList.remove('addColorCeara');
-      break;
-
-    case 'frame addColorFortaleza':
-      supBar.classList.remove('addColorFortaleza');
-      break;
+  const classMap = {
+    'frame addColorCeara': 'addColorCeara',
+    'frame addColorFortaleza': 'addColorFortaleza',
+  };
+  
+  const currentClass = supBar.classList.value;
+  const classToRemove = classMap[currentClass];
+  
+  if (classToRemove) {
+    supBar.classList.remove(classToRemove);
   }
+
   supBar.classList.toggle('addColorArena');
 
-  // === === === === === === === === === === === === === === === === === ===
-  // condicional para saber se a cor da barra superior foi alterada para trocar os ícones por brancos.
-  // === === === === === === === === === === === === === === === === === ===
-   
-  if(supBar.classList.value == 'frame addColorArena'){
-    // settingsIcon.setAttribute('src', 'assets/settingsWhite.svg');
-    minimizeIcon.setAttribute('src', 'assets/minimizeWhite.svg');
-    closeIcon.setAttribute('src', 'assets/closeWhite.svg');
-  }else {
-    // settingsIcon.setAttribute('src', 'assets/settings.svg');
-    minimizeIcon.setAttribute('src', 'assets/minimize.svg');
-    closeIcon.setAttribute('src', 'assets/close.svg');
-  }
 
-  // === === === === === === === === === === === === === === === === === ===
-  // Botões
-  // === === === === === === === === === === === === === === === === === ===
-  if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsCeara')){
-    buttonStart.classList.remove('buttonsCeara')
-  }else if(buttonStart.classList.value == 'allButtonsStopwatch buttonsCeara'){
-    buttonStart.classList.remove('buttonsCeara')
-  }else if(buttonStart.classList.contains('configDisabledButton') && buttonStart.classList.contains('buttonsFortaleza')){
-    buttonStart.classList.remove('buttonsFortaleza')
-  }else if(buttonStart.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-    buttonStart.classList.remove('buttonsFortaleza')
-  }
-  
-  if(buttonPause.classList.value == 'allButtonsStopwatch buttonsCeara'){
-    buttonPause.classList.remove('buttonsCeara')
-  }else if(buttonPause.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-    buttonPause.classList.remove('buttonsFortaleza')
-  }
-  
-  if(buttonStop.classList.value == 'allButtonsStopwatch buttonsCeara'){
-    buttonStop.classList.remove('buttonsCeara')
-  } else if(buttonStop.classList.value == 'allButtonsStopwatch buttonsFortaleza'){
-    buttonStop.classList.remove('buttonsFortaleza')
-  }
-  
-  // === === === === === === === === === === === === === === === === === ===
+  changeTheme('frame addColorArena', 'assets/minimizeWhite.svg', 'assets/closeWhite.svg');
+
+  const buttons = [buttonStart, buttonPause, buttonStop];
+      const classesToRemove = ['buttonsCeara', 'buttonsFortaleza'];
+
+      buttons.forEach(button => {
+        classesToRemove.forEach(classToRemove => {
+          if (button.classList.contains(classToRemove) && (button.classList.value === `allButtonsStopwatch ${classToRemove}` || button.classList.contains('configDisabledButton'))) {
+            button.classList.remove(classToRemove)
+          }
+        });
+      });
   
   buttonStart.classList.toggle('buttonsArena')
   buttonPause.classList.toggle('buttonsArena')
   buttonStop.classList.toggle('buttonsArena')
   
-  // === === === === === === === === === === === === === === === === === ===
-  // Contador
-  // === === === === === === === === === === === === === === === === === ===
-
-  if(counter.classList.value == 'counterCeara'){
-    counter.classList.remove('counterCeara')
+  const classCounterMap = {
+    'counterCeara': 'counterCeara',
+    'counterFortaleza': 'counterFortaleza',
+  };
+  
+  const currentCounterClass = counter.classList.value;
+  const classCounterToRemove = classCounterMap[currentCounterClass];
+  
+  if (classCounterToRemove) {
+    counter.classList.remove(classCounterToRemove);
   }
-  if(counter.classList.value == 'counterFortaleza'){
-    counter.classList.remove('counterFortaleza')
-  }
-  counter.classList.toggle('counterArena')
+  
+  counter.classList.toggle('counterArena');
 }
 
 buttonArena.addEventListener('click', arenaTheme);

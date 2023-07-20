@@ -1,6 +1,5 @@
 const { BrowserWindow, app, ipcMain, Tray } = require('electron');
-// const url = require('url');
-// const path = require('path')
+
 const ipc = ipcMain
 
 let win = null;
@@ -20,15 +19,12 @@ function boot() {
         }
     })
     win.loadURL(`file://${__dirname}/index.html`)
-    // win.openDevTools();
     
-    // MINIMIZE APP 
     ipc.on('minimizeApp', () =>{
       console.log('Clicked on minimize Button')
       win.minimize();
     })
 
-    // CLOSE APP
     ipc.on('closeApp', () =>{
       console.log('Clicked on close Button')
       win.close();
